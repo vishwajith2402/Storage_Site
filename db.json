@@ -1,0 +1,99 @@
+{
+  "users": [
+    {
+      "id": "87e23795-ecb9-426e-826e-ac065ff86627",
+      "name": "Test User",
+      "email": "test@example.com",
+      "passwordHash": "35b27ea919fa7b26d67c26db9087f922:d40e4ed1630ac9eab86fef1d06c32f7819f42fb293fabdedc4794ba57399ad121caa77f102c63d551737ecd5f182dd78898f00e1bc333316c3fc9c878ba39d97",
+      "files": [
+        {
+          "id": "b962c4f2-4fb0-40dd-aabc-163faa48f93d",
+          "fileName": "hello.txt",
+          "mimeType": "text/plain",
+          "size": 15,
+          "uploadedAt": "2026-05-10T07:39:25.834Z",
+          "relativePath": "87e23795-ecb9-426e-826e-ac065ff86627\\b962c4f2-4fb0-40dd-aabc-163faa48f93d-hello.txt"
+        }
+      ],
+      "folders": []
+    },
+    {
+      "id": "463e75b9-6163-4b77-bd39-a634754470e8",
+      "name": "vishwajith",
+      "email": "vishwajith.al24@krct.ac.in",
+      "passwordHash": "ace7ce6bc20983cafaebed11311344fb:a1ef73f7131a690875d2d4bb0770d66426625c5eb96b9a99ea1843bd0a9a3798b9d0152ed3da9c5c34b3257139d57bdabf9987f606cea67c0da90700a5307ad0",
+      "files": [
+        {
+          "id": "469dc5ad-e1cd-4a5c-8ba7-24da76110dab",
+          "fileName": "1000218797.jpg",
+          "mimeType": "image/jpeg",
+          "size": 153590,
+          "uploadedAt": "2026-05-10T07:44:51.085Z",
+          "relativePath": "463e75b9-6163-4b77-bd39-a634754470e8\\469dc5ad-e1cd-4a5c-8ba7-24da76110dab-1000218797.jpg"
+        }
+      ],
+      "folders": []
+    },
+    {
+      "id": "1cebea1a-92d9-4cd8-a3e8-4fd92aa13c82",
+      "name": "Luxury User",
+      "email": "test-b07327f2@example.com",
+      "passwordHash": "8b18bbbe0fd235c18574467e07e54e5d:b6857b73798801f99d90686d5f2f0d925b2b553bafa8cd9944fb319279008cb708b353478cb9f105fbebabe42ce010b9c5bfd256bb1211f0828dbe46ac5fd8f1",
+      "files": [],
+      "folders": []
+    },
+    {
+      "id": "6192746d-6811-4a00-8c8a-f366533a73ed",
+      "name": "Luxury User",
+      "email": "test-cec8a671@example.com",
+      "passwordHash": "0c61f7dfcfc30450ed6e24f67fd25fbf:149e1f0c6f83f57a0074557a7610951e22b8a3c8dfd006e4c6b66555848893ffa24ef32dbb9c68096e614ac7b0f0cb0fc9cc9c71c4f2282a77409f9a3373ef2c",
+      "files": [
+        {
+          "id": "a471f088-55b4-4748-b9af-f8836ef6b61b",
+          "fileName": "notes.txt",
+          "mimeType": "text/plain",
+          "size": 16,
+          "uploadedAt": "2026-05-10T07:52:41.238Z",
+          "relativePath": "6192746d-6811-4a00-8c8a-f366533a73ed\\Projects\\a471f088-55b4-4748-b9af-f8836ef6b61b-notes.txt",
+          "folderId": "19f7ba4c-8b15-4206-a6bb-4ff2e44646a7",
+          "folderPath": "Projects"
+        }
+      ],
+      "folders": [
+        {
+          "id": "19f7ba4c-8b15-4206-a6bb-4ff2e44646a7",
+          "name": "Projects",
+          "parentId": null,
+          "createdAt": "2026-05-10T07:52:41.222Z"
+        }
+      ]
+    }
+  ],
+  "sessions": [
+    {
+      "token": "9c5455fa31f6c952afbfcb695cbc1e8658890b3766d8252a",
+      "userId": "87e23795-ecb9-426e-826e-ac065ff86627",
+      "createdAt": "2026-05-10T07:39:25.755Z"
+    },
+    {
+      "token": "ee4856e1315b2cbb1cdc8ce7f16668e63c3c22b44d1dd5b0",
+      "userId": "463e75b9-6163-4b77-bd39-a634754470e8",
+      "createdAt": "2026-05-10T07:44:26.790Z"
+    },
+    {
+      "token": "461c36c32c58c7df5090112baa7bf10f78ad6d95f4f3b0de",
+      "userId": "463e75b9-6163-4b77-bd39-a634754470e8",
+      "createdAt": "2026-05-10T07:45:02.647Z"
+    },
+    {
+      "token": "706efe42849d893055c6d3151f2e366fdf3758cb860e7632",
+      "userId": "1cebea1a-92d9-4cd8-a3e8-4fd92aa13c82",
+      "createdAt": "2026-05-10T07:52:20.548Z"
+    },
+    {
+      "token": "326dbc40a317b47bc5ec2316eadf27f1ddc2544e4bd59b0a",
+      "userId": "6192746d-6811-4a00-8c8a-f366533a73ed",
+      "createdAt": "2026-05-10T07:52:41.187Z"
+    }
+  ]
+}

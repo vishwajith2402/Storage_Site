@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VaultDrop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-theme="obsidian">
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <section id="auth-page" class="auth-page">
+      <div class="auth-page-shell">
+        <div class="auth-hero">
+          <div class="brand-mark">
+            <div class="brand-icon">V</div>
+            <div>
+              <p class="brand-name">VaultDrop</p>
+              <p class="brand-subtitle">Luxury static storage experience</p>
+            </div>
+          </div>
+
+          <div class="hero-copy">
+            <p class="eyebrow">Private vault experience</p>
+            <h1>Your files, without the clutter.</h1>
+            <p class="hero-text">
+              Store documents, images, videos, archives, and project files in a polished workspace focused on the essentials: folders, upload, preview, favorites, recovery, and clean organization.
+            </p>
+            <div class="static-note">
+              Static publish mode: this version stores accounts and files in the current browser for demo and publishing purposes.
+            </div>
+            <div class="hero-points">
+              <span>Secure sign in</span>
+              <span>Folder-based storage</span>
+              <span>Multiple upload</span>
+              <span>Preview and favorites</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-panel">
+          <div class="auth-card auth-card-dedicated">
+            <div class="card-badge">Dedicated access page</div>
+            <h2 class="auth-title">Enter your private vault</h2>
+            <p class="auth-copy">Sign in to continue into your workspace, or create an account to start a new storage area.</p>
+
+            <div class="tabs">
+              <button id="show-login" class="tab active" type="button">Login</button>
+              <button id="show-register" class="tab" type="button">Create account</button>
+            </div>
+
+            <form id="login-form" class="auth-form">
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="Enter password" required />
+              </label>
+              <button type="submit" class="primary-btn">Login</button>
+            </form>
+
+            <form id="register-form" class="auth-form hidden">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" placeholder="Create password" required />
+              </label>
+              <button type="submit" class="primary-btn">Create account</button>
+            </form>
+
+            <p id="auth-message" class="message"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="app-page" class="app-page hidden">
+      <header class="topbar">
+        <div class="brand-mark">
+          <div class="brand-icon">V</div>
+          <div>
+            <p class="brand-name">VaultDrop</p>
+          </div>
+        </div>
+        <div class="topbar-user">
+          <span class="topbar-user-label">Username</span>
+          <strong id="topbar-username">Guest</strong>
+        </div>
+      </header>
+
+      <main class="page-shell">
+        <section id="dashboard" class="dashboard">
+          <div class="dashboard-top">
+            <div>
+              <p class="eyebrow">Personal storage</p>
+              <h2 id="welcome-title">Welcome</h2>
+              <p class="dashboard-note">This static edition keeps data in this browser only.</p>
+            </div>
+            <button id="logout-btn" class="ghost-btn" type="button">Logout</button>
+          </div>
+
+          <section class="overview-grid">
+            <article class="overview-card profile-card">
+              <div class="profile-avatar" id="profile-avatar">G</div>
+              <div>
+                <p class="eyebrow">Profile</p>
+                <h3 id="profile-name">Guest</h3>
+                <p id="profile-email" class="file-meta">No active account</p>
+              </div>
+            </article>
+            <article class="overview-card">
+              <p class="eyebrow">Storage</p>
+              <h3 id="storage-used">0 MB</h3>
+              <p id="storage-breakdown" class="file-meta">0 files across 0 folders</p>
+            </article>
+            <article class="overview-card">
+              <p class="eyebrow">Highlights</p>
+              <h3 id="favorite-count">0 favorites</h3>
+              <p id="highlight-breakdown" class="file-meta">0 folders, 0 items in trash</p>
+            </article>
+          </section>
+
+          <section class="details-grid">
+            <article class="detail-card">
+              <div class="panel-head">
+                <h3>Account details</h3>
+              </div>
+              <div class="details-list">
+                <div class="detail-row">
+                  <span class="detail-label">Full name</span>
+                  <strong id="detail-name">Guest</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Email</span>
+                  <strong id="detail-email">No active account</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Member since</span>
+                  <strong id="detail-joined">-</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Last activity</span>
+                  <strong id="detail-last-activity">No activity yet</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="detail-card">
+              <div class="panel-head">
+                <h3>Workspace details</h3>
+              </div>
+              <div class="details-list">
+                <div class="detail-row">
+                  <span class="detail-label">Current theme</span>
+                  <strong id="detail-theme">Obsidian Gold</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Current folder view</span>
+                  <strong id="detail-folder-view">All folders</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Active files</span>
+                  <strong id="detail-active-files">0</strong>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Files in trash</span>
+                  <strong id="detail-trash-count">0</strong>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="upload-panel">
+            <div class="panel-head panel-stack">
+              <div>
+                <h3>Control center</h3>
+                <p>Search, filter, sort, switch themes, and focus on one folder at a time.</p>
+              </div>
+            </div>
+            <div class="controls-grid">
+              <label>
+                <span>Search</span>
+                <input id="search-input" type="search" placeholder="Search by file or folder name" />
+              </label>
+              <label>
+                <span>Sort by</span>
+                <select id="sort-select">
+                  <option value="recent">Most recent</option>
+                  <option value="oldest">Oldest</option>
+                  <option value="name">File name</option>
+                  <option value="size-desc">Largest first</option>
+                  <option value="size-asc">Smallest first</option>
+                </select>
+              </label>
+              <label>
+                <span>Filter by type</span>
+                <select id="type-filter">
+                  <option value="all">All files</option>
+                  <option value="image">Images</option>
+                  <option value="video">Videos</option>
+                  <option value="pdf">PDFs</option>
+                  <option value="text">Text</option>
+                  <option value="archive">Archives</option>
+                  <option value="other">Other</option>
+                </select>
+              </label>
+              <label>
+                <span>Folder view</span>
+                <select id="folder-view-select">
+                  <option value="">All folders</option>
+                </select>
+              </label>
+              <label>
+                <span>Theme</span>
+                <select id="theme-select">
+                  <option value="obsidian">Obsidian Gold</option>
+                  <option value="champagne">Champagne Luxe</option>
+                  <option value="emerald">Emerald Night</option>
+                </select>
+              </label>
+              <label class="toggle-card">
+                <input id="favorites-only-toggle" type="checkbox" />
+                <span>Favorites only</span>
+              </label>
+              <label class="toggle-card">
+                <input id="trash-toggle" type="checkbox" />
+                <span>Show recycle bin</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="workspace-stack">
+            <div class="upload-panel">
+              <div class="panel-head panel-stack">
+                <div>
+                  <h3>Create a folder</h3>
+                  <p>Create simple folders to organize your files.</p>
+                </div>
+              </div>
+              <form id="folder-form" class="simplified-form">
+                <input id="folder-name-input" type="text" placeholder="Folder name" required />
+                <select id="folder-parent-select">
+                  <option value="">Create at root level</option>
+                </select>
+                <button type="submit" class="primary-btn">Create folder</button>
+              </form>
+            </div>
+
+            <div class="upload-panel">
+              <div class="panel-head panel-stack">
+                <div>
+                  <h3>Upload files</h3>
+                  <p>Drop multiple files and send them into a chosen folder in one action.</p>
+                </div>
+              </div>
+              <div id="drop-zone" class="drop-zone">
+                <p class="drop-title">Drag and drop files here</p>
+                <p class="file-meta">or pick multiple files below</p>
+              </div>
+              <form id="upload-form" class="simplified-form">
+                <input id="file-input" type="file" multiple required />
+                <select id="upload-folder-select">
+                  <option value="">Upload to root level</option>
+                </select>
+                <button type="submit" class="primary-btn">Upload selected files</button>
+              </form>
+              <div id="pending-files" class="pending-files"></div>
+            </div>
+
+            <div class="two-panel-grid">
+              <div class="upload-panel">
+                <div class="panel-head">
+                  <h3>Folders</h3>
+                  <button id="clear-folder-view-btn" class="ghost-btn" type="button">Clear folder focus</button>
+                </div>
+                <div id="folder-grid" class="folder-grid"></div>
+              </div>
+
+              <div class="file-panel">
+                <div class="panel-head panel-wrap">
+                  <div>
+                    <h3>Your storage</h3>
+                    <p class="file-meta">Preview, favorite, restore, and manage files from one simpler list.</p>
+                  </div>
+                  <button id="refresh-btn" class="ghost-btn" type="button">Refresh</button>
+                </div>
+
+                <div id="file-list" class="file-list"></div>
+                <p id="file-message" class="message"></p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </section>
+
+    <div id="preview-modal" class="modal hidden">
+      <div class="modal-backdrop" data-close-modal="preview"></div>
+      <div class="modal-panel">
+        <div class="panel-head">
+          <h3 id="preview-title">Preview</h3>
+          <button class="ghost-btn" type="button" data-close-modal="preview">Close</button>
+        </div>
+        <div id="preview-content" class="preview-content"></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>

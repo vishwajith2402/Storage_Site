@@ -1,0 +1,12 @@
+{
+  "name": "storagesite",
+  "version": "1.0.0",
+  "description": "Simple personal storage website with login and file uploads",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
